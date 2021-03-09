@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Note: Change Firebase config.
+
+Add you firebase project config in firebase.json
+
+## Project Image
+
+![LinkedIn-Clone-App](https://user-images.githubusercontent.com/6918020/110504375-1ae53700-8123-11eb-8baa-db77b706c4d8.png)
+
+## Main Feed Page
+
+![LinkedIn-Clone-App-Feed](https://user-images.githubusercontent.com/6918020/110504454-305a6100-8123-11eb-9863-9efdb6ee1494.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
