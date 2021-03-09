@@ -5,6 +5,7 @@ import { auth } from "../../firebase";
 import "./Login.css";
 import logo from "../../assets/logo.png";
 import TextField from "@material-ui/core/TextField";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -64,7 +65,10 @@ function Login() {
       <div className="login">
         <div>
           <h2 className="login_title">Sign In</h2>
-          <p>Stay updated on your professional world</p>
+          <p>
+            Stay updated on your professional world <br />
+            (Only read access, write access to particular users )
+          </p>
         </div>
 
         <form>
@@ -141,8 +145,20 @@ function Login() {
       <div className="bottom">
         <p>LinkedIn Clone For Learnig purpose Only.</p>
         <p>
-          Made with 💻 and ☕ <a href="link.blogtheorem.com">blogtheorem</a>
+          Made with 💻 and ☕ by{" "}
+          <a href="https://link.blogtheorem.com/">blogtheorem</a>
         </p>
+        <div className="bottom_github">
+          <a
+            href="https://github.com/enggsuraj/linkedin-clone-app"
+            target="_blank"
+          >
+            <div>
+              <span>Project Github Code</span>
+              <GitHubIcon />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
