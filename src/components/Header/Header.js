@@ -12,6 +12,7 @@ import { auth } from "../../firebase";
 import Avatar from "@material-ui/core/Avatar";
 import { selectUser, logout } from "../../features/userSlice";
 import AppsIcon from "@material-ui/icons/Apps";
+import logo from "../../assets/linkedin-logo.svg";
 
 function Header() {
   const dispatch = useDispatch();
@@ -22,13 +23,19 @@ function Header() {
     auth.signOut();
   };
 
+  const handleDisplay = () => {
+    let data = document.getElementById("profile_logout");
+    if (data.style.display === "block") {
+      data.style.display = "none";
+    } else {
+      data.style.display = "block";
+    }
+  };
+
   return (
     <div className="header">
       <div className="header__left">
-        <img
-          src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"
-          alt="logoss"
-        />
+        <img src={logo} alt="logos" />
         <div className="header__search">
           <SearchIcon />
           <input placeholder="Search" type="text" />
@@ -42,13 +49,17 @@ function Header() {
         <HeaderOption Icon={NotificationsIcon} title="Notification" />
         <HeaderOption Icon={AppsIcon} title="Work" />
 
-        <Avatar
-          onClick={logoutOfApp}
-          className="headerOption__svg"
-          src={user.photoUrl}
-        >
-          {user?.email[0]}
-        </Avatar>
+        <div className="profile">
+          <div classsName="profile__block">
+            <Avatar onClick={handleDisplay} src={user.photoUrl}>
+              {user?.email[0]}
+            </Avatar>
+          </div>
+          <div className="profile_logout" id="profile_logout">
+            <button onClick={logoutOfApp}>Logout</button>
+          </div>
+        </div>
+
         <p className="header__premium">Try Premium Free for 1 Month</p>
       </div>
     </div>

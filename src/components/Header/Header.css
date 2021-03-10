@@ -39,6 +39,7 @@
 
 .header__right {
   display: flex;
+  position: relative;
 }
 
 .headerOption {
@@ -62,8 +63,22 @@
   font-size: 12px;
 }
 
+.profile {
+  position: relative;
+}
+
+.profile_logout {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+}
+
 @media only screen and (max-width: 412px) {
-  .header__right {
+  .headerOption {
     display: none;
+  }
+  .profile {
+    display: block;
   }
 }

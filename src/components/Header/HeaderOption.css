@@ -21,3 +21,14 @@
 .headerOption:hover {
   color: #000;
 }
+
+@media only screen and (max-width: 412px) {
+  .headerOption,
+  .header__premium {
+    display: none;
+  }
+
+  .profile_logout {
+    top: 47px;
+  }
+}

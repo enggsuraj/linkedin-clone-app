@@ -3,9 +3,10 @@ import { useDispatch } from "react-redux";
 import { login } from "../../features/userSlice";
 import { auth } from "../../firebase";
 import "./Login.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/linkedin-logo.svg";
 import TextField from "@material-ui/core/TextField";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { Button } from "@material-ui/core";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -131,9 +132,17 @@ function Login() {
             variant="outlined"
             className="inputfield"
           />
-          <button type="submit" onClick={loginToApp}>
+          {/* <button type="submit" onClick={loginToApp}>
             Sign In
-          </button>
+          </button> */}
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            onClick={loginToApp}
+          >
+            Sign In
+          </Button>
         </form>
         <div className="join">
           <span>New to LinkedIn? &nbsp;</span>
@@ -143,16 +152,13 @@ function Login() {
         </div>
       </div>
       <div className="bottom">
-        <p>LinkedIn Clone For Learnig purpose Only.</p>
+        <p>LinkedIn Clone For Learning purpose Only.</p>
         <p>
           Made with 💻 and ☕ by{" "}
           <a href="https://link.blogtheorem.com/">blogtheorem</a>
         </p>
         <div className="bottom_github">
-          <a
-            href="https://github.com/enggsuraj/linkedin-clone-app"
-            target="_blank"
-          >
+          <a href="https://github.com/enggsuraj/linkedin-clone-app">
             <div>
               <span>Project Github Code</span>
               <GitHubIcon />
