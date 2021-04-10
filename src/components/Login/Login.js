@@ -9,7 +9,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { Button } from "@material-ui/core";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("johndoe@gmail.com");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
@@ -97,7 +97,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
           /> */}
-          <TextField
+          {/* <TextField
             id="outlined-search"
             label="Full Name"
             type="search"
@@ -112,7 +112,7 @@ function Login() {
             variant="outlined"
             value={profilePic}
             onChange={(e) => setProfilePic(e.target.value)}
-          />
+          /> */}
           <TextField
             id="outlined-search"
             label="Email"
@@ -126,6 +126,7 @@ function Login() {
             id="outlined-password-input"
             label="Password"
             type="password"
+            placeholder="123456"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="current-password"
@@ -145,17 +146,19 @@ function Login() {
           </Button>
         </form>
         <div className="join">
-          <span>New to LinkedIn? &nbsp;</span>
-          <span className="login_register" onClick={register}>
+          <span>&nbsp;</span>
+
+          {/*<span>New to LinkedIn? &nbsp;</span>
+           <span className="login_register" onClick={register}>
             Join Now
-          </span>
+          </span> */}
         </div>
       </div>
       <div className="bottom">
         <p>LinkedIn Clone For Learning purpose Only.</p>
         <p>
           Made with 💻 and ☕ by{" "}
-          <a href="https://link.blogtheorem.com/">blogtheorem</a>
+          <a href="https://blogtheorem.com/">blogtheorem</a>
         </p>
         <div className="bottom_github">
           <a href="https://github.com/enggsuraj/linkedin-clone-app">
